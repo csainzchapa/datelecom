@@ -32,7 +32,7 @@ def dialogflow_webhook():
                         "🗂 Si lo prefieres, te puedo enviar un catálogo con los planes y equipos más recientes. ¿Te lo mando por WhatsApp o prefieres el enlace aquí?",
                         "🧩 También contamos con planes sin equipo, ideales si ya tienes un celular. ¿Te gustaría conocer esas opciones más accesibles?",
                         "🧑💼 ¿Buscas líneas para tu empresa o varios empleados? Tenemos paquetes especiales para negocios con facturación y soporte personalizado."
-        ]
+        
 
     elif intent == "renovacion":
         renovacion_responses = [
@@ -47,7 +47,17 @@ def dialogflow_webhook():
         response_text = random.choice(renovacion_responses)
 
     elif intent == "facturacion_pagos":
-        response_text = "Puedes pagar en línea, en OXXO o con transferencia. ¿Te envío el enlace de pago?"
+        response_text = "Puedes pagar en línea, en OXXO o con transferencia. ¿Te envío el enlace de pago?",
+                        "💳 Puedes realizar el pago de tu plan Telcel de varias formas: •	En línea desde Mi Telcel •	En tiendas OXXO, 7-Eleven, Chedraui, etc. •	Por transferencia bancaria. ¿Quieres que te envíe el link de pago?",
+                        "✅ Aquí tienes el enlace para pagar tu plan en línea con tarjeta: https://www.mitelcel.com También puedes descargar la app Mi Telcel para Android o iOS.",
+                        "📅 Tu fecha de corte es generalmente el día 15 de cada mes (puede variar según tu plan). ¿Te gustaría que revise tu número para confirmar?",
+                        "🧾 Si necesitas factura electrónica, puedes obtenerla desde Mi Telcel o solicitárnosla aquí. Por favor, envíanos tu RFC y datos fiscales si deseas que te la generemos.",
+                        "Si no te ha llegado la factura, puede deberse a: •	Problemas con el correo registrado •	Corte reciente sin generación aún •	Tu línea no tiene facturación activa ¿Te gustaría que un asesor revise tu caso?",
+                        "Si realizaste tu pago recientemente, la confirmación puede tardar hasta 24 horas en reflejarse. Si ya pasaron más de 24h, por favor envíanos el comprobante para verificarlo.",
+                        "💰 Puedes pagar tu plan Telcel en efectivo en: •	OXXO •	7-Eleven •	Farmacias Guadalajara •	Tiendas de autoservicio participantes Solo necesitas tu número Telcel para hacer el pago.",
+                        "💳 Aceptamos pagos con tarjeta de crédito o débito desde la plataforma de Mi Telcel. ¿Quieres el link o prefieres pagar en tienda física?",
+                        "📄 Puedes ver tu recibo en PDF ingresando a: https://www.mitelcel.com/recibo O desde la app Mi Telcel."
+
 
     elif intent == "soporte_tecnico":
         response_text = "📡 Si no tienes señal o red, por favor intenta lo siguiente:\n1. Apaga y enciende tu equipo\n2. Activa y desactiva el 'modo avión'\n3. Verifica que tu chip esté bien insertado\nSi el problema continúa, puedo canalizarte con soporte técnico.", \
